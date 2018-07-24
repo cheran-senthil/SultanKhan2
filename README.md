@@ -4,7 +4,7 @@ SultanKhan2 is Lichess integration of the Chess Engine [Chaturanga](https://gith
 
 ## Usage
 
-- Create a lichess bot account, by following the steps [here](https://lichess.org/api#tag/Chess-Bot)
+- Create a lichess bot account, by following the steps [here](https://lichess.org/api#tag/Chess-Bot).
 - Create an API access token with "Play bot moves" permission.
 - In `main.py`:
     - change `token` to your Lichess access API token
