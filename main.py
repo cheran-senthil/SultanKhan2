@@ -1,20 +1,24 @@
 import chaturanga
 import berserk
 
-Chessboard = chaturanga.Chessboard()
+token = 'token'
+bot_id = 'sultankhan2'
 
-session = berserk.TokenSession('token')
+session = berserk.TokenSession(token)
 lichess = berserk.Client(session)
 
 for challenge in lichess.bots.stream_incoming_events():
+
     game_id = challenge['challenge']['id']
     lichess.bots.accept_challenge(game_id)
+
+    Chessboard = chaturanga.Chessboard()
     flag = False
 
     for game_state in lichess.bots.stream_game_state(game_id):
         if not flag:
             flag = True
-            is_black = game_state['black']['id'] == 'sultankhan2'
+            is_black = game_state['black']['id'] == bot_id
             bot_color = {True: 'b', False: 'w'}[is_black]
 
             if bot_color == 'w':
