@@ -1,2 +1,2 @@
-chaturanga>=0.1.5
+chaturanga>=0.1.6
 berserk>=0.1.2
