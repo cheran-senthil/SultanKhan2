@@ -1,5 +1,7 @@
 # SultanKhan2
 
+Available for play at https://lichess.org/@/SultanKhan2.
+
 SultanKhan2 is a Lichess integration of my Chess Engine [Chaturanga](https://github.com/Cheran-Senthil/Chaturanga)
 
 ## Usage
