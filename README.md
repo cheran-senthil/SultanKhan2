@@ -1,6 +1,6 @@
 # SultanKhan2
 
-SultanKhan2 is Lichess integration of the Chess Engine [Chaturanga](https://github.com/Cheran-Senthil/Chaturanga)
+SultanKhan2 is a Lichess integration of the Chess Engine [Chaturanga](https://github.com/Cheran-Senthil/Chaturanga)
 
 ## Usage
 
