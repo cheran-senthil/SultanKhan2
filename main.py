@@ -17,19 +17,17 @@ for event in lichess.bots.stream_incoming_events():
 
             for game_state in lichess.bots.stream_game_state(game_id):
                 if game_state['type'] == 'gameFull':
-                    is_black = game_state['black']['id'] == bot_id
-                    bot_color = {True: 'b', False: 'w'}[is_black]
+                    is_white = game_state['black']['id'] != bot_id
 
-                    if bot_color == 'w':
+                    if is_white:
                         bot_move = chaturanga.bot(Chessboard)[0]
                         Chessboard.move(bot_move)
                         lichess.bots.make_move(game_id, bot_move)
 
                 if game_state['type'] == 'gameState':
-                    last_move = game_state['moves'].split(' ')[-1]
-                    Chessboard.move(last_move)
-
-                    if bot_color == Chessboard.active_color:
+                    moves = game_state['moves'].split(' ')
+                    if len(moves) % 2 != is_white:
+                        Chessboard.move(moves[-1])
                         bot_move = chaturanga.bot(Chessboard)[0]
                         Chessboard.move(bot_move)
                         lichess.bots.make_move(game_id, bot_move)
