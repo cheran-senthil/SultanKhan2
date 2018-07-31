@@ -1,6 +1,12 @@
 # SultanKhan2
 
-SultanKhan2 is a Lichess integration of the Chess Engine [Chaturanga](https://github.com/Cheran-Senthil/Chaturanga)
+[SultanKhan2](http://www.chessgames.com/perl/chessgame?gid=1135510) is a Lichess integration of my Chess Engine [Chaturanga](https://github.com/Cheran-Senthil/Chaturanga)
+
+## Sample Game
+
+https://lichess.org/uRuE8p1k5axh
+
+![SultanKhan2 vs Stockfish level 4](https://i.imgur.com/pnl1uyp.png)
 
 ## Usage
 
