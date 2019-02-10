@@ -1,5 +1,5 @@
-import chaturanga
 import berserk
+import chaturanga
 
 token = 'token'
 bot_id = 'sultankhan2'
@@ -24,14 +24,18 @@ for event in lichess.bots.stream_incoming_events():
                 if game_state['initialFen'] == 'startpos':
                     Chessboard = chaturanga.Chessboard()
                 else:
-                    Chessboard = chaturanga.Chessboard(game_state['initialFen'])
+                    Chessboard = chaturanga.Chessboard(
+                        game_state['initialFen'])
                 if challenge['color'] == 'random':
                     if 'id' in game_state['white']:
                         is_white = game_state['white']['id'] == bot_id
                     else:
                         is_white = False
                 else:
-                    is_white = {'white': False, 'black': True}[challenge['color']]
+                    is_white = {
+                        'white': False,
+                        'black': True
+                    }[challenge['color']]
 
             if is_white:
                 bot_move = chaturanga.bot(Chessboard)[0]
